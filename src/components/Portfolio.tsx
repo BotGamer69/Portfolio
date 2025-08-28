@@ -1,4 +1,5 @@
 import { ExternalLink, Github } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Portfolio = () => {
   const projects = [
@@ -137,10 +138,13 @@ const Portfolio = () => {
 
           {/* View More Button */}
           <div className="text-center mt-12">
-            <button className="tech-button group">
+            <Link 
+              to="/projects" 
+              className="tech-button group inline-flex items-center justify-center gap-2"
+            >
               View All Projects
-              <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </button>
+              <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </div>
       </div>
